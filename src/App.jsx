@@ -147,12 +147,16 @@ export default function App() {
             </button>
             <button
               className="intro-button text-lg font-medium text-gray-900 bg-white px-6 py-3 rounded-full hover:bg-gray-200"
-              onClick={() =>
+              onClick={() => {
+                const names = ["Larkspur", "Larkie", "Lilith", "Lily"];
+                const randomName =
+                  names[Math.floor(Math.random() * names.length)];
+
                 handleSelection(
-                  "My Cuddlebug~",
-                  "[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#936_100%)]"
-                )
-              }
+                  `${randomName}`,
+                  "[background:radial-gradient(125% 125% at 50% 10%, #000 40%, #936 100%)]"
+                );
+              }}
             >
               They/Them
             </button>
