@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import anime from "animejs";
+import sillyGuy from "./assets/silly-silly-guy.gif";
+import christmasAudio from "./assets/christmas.wav";
 import Snowfall from "react-snowfall";
 import { FaArrowCircleDown, FaArrowCircleUp } from "react-icons/fa";
 export default function App() {
@@ -15,7 +17,7 @@ export default function App() {
 
   const handleSelection = (name, gradient) => {
     setBackgroundStyle(gradient); // Change background gradient based on the pronoun
-    const audio = new Audio("/assets/christmas.wav"); // Replace with the correct path
+    const audio = new Audio(christmasAudio); // Replace with the correct path
     audio.loop = true; // Set the audio to loop
     audio.play();
     anime({
@@ -255,7 +257,7 @@ export default function App() {
             }`}
           >
             <img
-              src="assets/silly-silly-guy.gif"
+              src={sillyGuy}
               alt="Silly guy"
               className="rounded-lg shadow-lg"
             />
